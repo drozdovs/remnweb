@@ -13,6 +13,14 @@ Remnawave API defined by `REMNAWAVE_API_URL`.
 1. Install PHP 8 and Composer.
 2. Run `composer install` to install dependencies.
 3. Create a MySQL database and user and put the connection details in `.env`.
+   For example:
+
+   ```sql
+   CREATE DATABASE remnweb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   CREATE USER 'remnweb'@'localhost' IDENTIFIED BY 'changeme';
+   GRANT ALL PRIVILEGES ON remnweb.* TO 'remnweb'@'localhost';
+   ```
+
    An admin account will be created automatically using `ADMIN_USER` and
    `ADMIN_PASS` from the environment file.
 4. Copy `.env.example` to `.env` and fill in your configuration values.
